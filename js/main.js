@@ -22,8 +22,9 @@ const mostrar_idade = () => {
         mes_nascimento: document.getElementById("mes").value,
         ano_nascimento: document.getElementById("ano").value
     }
-    console.log(
-        `Meu nome é ${dados_cliente.nome} e tenho `
-        + `${calcular_idade(dados_cliente)} anos de idade.`
-    )
+    idade = `Meu nome é ${dados_cliente.nome} e tenho `
+            + `${calcular_idade(dados_cliente)} anos de idade.`
+
+    document.getElementById("idade").innerHTML = idade
+    console.log(idade)
 }
