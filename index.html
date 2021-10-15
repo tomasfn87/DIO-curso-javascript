@@ -5,24 +5,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-      Digital Innovation One - Programação para internet com JavaScript
-    </title>
+    Digital Innovation One - Programação para internet com JavaScript
+  </title>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
   <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-  <div>
-    <form>
-      Diga nos seu nome e idade:<br>
-      <input id="nome" placeholder="Nome"><br>  
-      Data de Nascimento:<br>
-      <input id="dia" placeholder="Dia">
-      <input id="mes" placeholder="Mês">
-      <input id="ano" placeholder="Ano"><br>
-      <button type="button" onclick="mostrar_idade()">Calcular idade</button>
-    </form>
-    <h3 id="idade"></h3>
+<body class="bg-dark">
+  <br>
+  <div class="container">
+    <div class="mb-3">
+      <input id="nome" placeholder="Nome" class="form-control bg-dark text-white">
+      <div id="emailHelp" class="form-text">Digite o nome completo ou apenas o primeiro nome</div>
+    </div>
+    <div class="mb-3">
+      <input id="dia" placeholder="Dia" class="form-control bg-dark text-white">
+      <div id="emailHelp" class="form-text">Digite o dia de nascimento</div>
+    </div>
+    <div class="mb-3">
+      <input id="mes" placeholder="Mês" class="form-control bg-dark text-white">
+      <div id="emailHelp" class="form-text">Digite o mês de nascimento</div>
+    </div>
+    <div class="mb-3">
+      <input id="ano" placeholder="Ano" class="form-control bg-dark text-white">
+      <div id="emailHelp" class="form-text">Digite o ano de nascimento</div>
+    </div>
+    <div class="g-lg-4">
+      <button type="button" class="btn btn-lg btn-outline-warning" onclick="mostrar_idade()">Ver idade</button>
+    </div>
+    <br>
+    <h5 id="idade" class="text-white-50"></h5 >
   </div>
 </body>
 </html>
