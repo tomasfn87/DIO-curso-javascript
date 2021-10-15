@@ -22,15 +22,15 @@ const mostrar_idade = () => {
         mes_nascimento: document.getElementById("mes").value,
         ano_nascimento: document.getElementById("ano").value
     }
-    idade = `Meu nome é ${dados_cliente.nome} e tenho `
-            + `${calcular_idade(dados_cliente)} anos de idade.`
+    idade = `Nome: ${dados_cliente.nome} &nbsp; | &nbsp; `
+            + `Idade: ${calcular_idade(dados_cliente)} anos`
     
     console.log(idade)
     $("#idade").html(idade)
 }
 
 $(function() {
-    $("div.proximo").hide("slow")
+    $("div.proximo").hide("slow") 
     $("div#item-1").click(function(){
         $("#idade").hide("slow")
     })
