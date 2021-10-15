@@ -35,6 +35,9 @@ $(function() {
         $("#idade").hide("slow")
     })
     $("div#item-1").keypress(function(){
+        $("#idade").hide("slow")
+    })
+    $("div#item-1").keypress(function(){
         $("div#item-2").show("slow")
     })
     $("div#item-1").click(function(){
@@ -52,6 +55,6 @@ $(function() {
     $("div#item-5").click(function(){
         $("div.proximo").hide("slow")
         $("#idade").show("slow")
-        $(":input").val('');
+        $(":input").val("");
     })
 })
