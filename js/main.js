@@ -37,6 +37,9 @@ $(function() {
     $("div#item-1").keypress(function(){
         $("div#item-2").show()
     })
+    $("div#item-1").click(function(){
+        $("div#item-2").show()
+    })
     $("div#item-2").keypress(function(){
         $("div#item-3").show()
     })
@@ -49,5 +52,6 @@ $(function() {
     $("div#item-5").click(function(){
         $("div.proximo").hide()
         $("#idade").show()
+        $(":input").val('');
     })
 })
