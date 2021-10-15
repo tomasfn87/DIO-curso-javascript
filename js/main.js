@@ -16,7 +16,7 @@ const calcular_idade = (dados_cliente) => {
 }
 
 const mostrar_idade = () => {
-    let dados_cliente = {
+    const dados_cliente = {
         nome: document.getElementById("nome").value,
         dia_nascimento: document.getElementById("dia").value,
         mes_nascimento: document.getElementById("mes").value,
