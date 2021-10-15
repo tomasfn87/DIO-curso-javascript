@@ -17,24 +17,36 @@
 <body class="bg-dark">
   <br>
   <div class="container-fluid bg-dark">
-    <div class="mb-3">
-      <input id="nome" placeholder="Nome" class="form-control bg-dark text-white" style="width: 15em;">
-      <div class="form-text">Digite o nome completo ou apenas o primeiro nome</div>
+    <h4 class="text-white-50" style="padding: .5em 0;">
+      Vamos calcular a idade
+    </h4>
+    <div class="mb-3" id="item-1">
+      <input id="nome" placeholder="Nome" style="width: 15em;"
+      class="form-control bg-dark text-white">
+      <div class="form-text">
+        Digite o nome completo ou apenas o primeiro nome
+      </div>
     </div>
-    <div class="mb-3">
-      <input id="dia" placeholder="Dia" class="form-control bg-dark text-white" style="width: 6em;">
+    <div class="mb-3 proximo" id="item-2">
+      <input id="dia" placeholder="Dia" style="width: 6em;"
+      class="form-control bg-dark text-white">
       <div class="form-text">Digite o dia de nascimento</div>
     </div>
-    <div class="mb-3">
-      <input id="mes" placeholder="Mês" class="form-control bg-dark text-white" style="width: 6em;">
+    <div class="mb-3 proximo" id="item-3">
+      <input id="mes" placeholder="Mês" style="width: 6em;"
+      class="form-control bg-dark text-white">
       <div class="form-text">Digite o mês de nascimento</div>
     </div>
-    <div class="mb-3">
-      <input id="ano" placeholder="Ano" class="form-control bg-dark text-white" style="width: 6em;">
+    <div class="mb-3 proximo" id="item-4">
+      <input id="ano" placeholder="Ano" style="width: 6em;"
+      class="form-control bg-dark text-white">
       <div class="form-text">Digite o ano de nascimento</div>
     </div>
-    <div class="g-lg-4">
-      <button type="button" class="btn btn-lg btn-outline-danger" onclick="mostrar_idade()">Ver idade</button>
+    <div class="g-lg-4 proximo" id="item-5">
+      <button type="button" class="btn btn-lg btn-outline-danger"
+      onclick="mostrar_idade()">
+        Ver idade
+      </button>
     </div>
     <br>
     <h5 id="idade" class="text-white-50"></h5 >
