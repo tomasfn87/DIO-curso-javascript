@@ -30,7 +30,7 @@ const mostrar_idade = () => {
 }
 
 $(function() {
-    $("div.proximo").hide("slow") 
+    $("div.proximo").hide() 
     $("div#item-1").click(function(){
         $("#idade").hide("slow")
     })
