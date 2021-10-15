@@ -30,28 +30,28 @@ const mostrar_idade = () => {
 }
 
 $(function() {
-    $("div.proximo").hide()
+    $("div.proximo").hide("slow")
     $("div#item-1").click(function(){
-        $("#idade").hide()
+        $("#idade").hide("slow")
     })
     $("div#item-1").keypress(function(){
-        $("div#item-2").show()
+        $("div#item-2").show("slow")
     })
     $("div#item-1").click(function(){
-        $("div#item-2").show()
+        $("div#item-2").show("slow")
     })
     $("div#item-2").keypress(function(){
-        $("div#item-3").show()
+        $("div#item-3").show("slow")
     })
     $("div#item-3").keypress(function(){
-        $("div#item-4").show()
+        $("div#item-4").show("slow")
     })
     $("div#item-4").keypress(function(){
-        $("div#item-5").show()
+        $("div#item-5").show("slow")
     })
     $("div#item-5").click(function(){
-        $("div.proximo").hide()
-        $("#idade").show()
+        $("div.proximo").hide("slow")
+        $("#idade").show("slow")
         $(":input").val('');
     })
 })
