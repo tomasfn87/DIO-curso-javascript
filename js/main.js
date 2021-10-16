@@ -1,5 +1,6 @@
+const data = new Date
+
 const calcular_idade = (dados_cliente) => {
-    const data = new Date
     const idade = data.getFullYear() - dados_cliente.ano
     if (data.getMonth() > dados_cliente.mes) {
         return idade
@@ -18,8 +19,10 @@ const mostrar_idade = () => {
         mes: document.getElementById("mes").value,
         ano: document.getElementById("ano").value
     }
-    idade = `Nome: <pop>${dados_cliente.nome}</pop> &nbsp; | &nbsp; `
-            + `Idade: <pop>${calcular_idade(dados_cliente)} anos</pop>`
+    idade = `Nome: <pop>${dados_cliente.nome}</pop> (${dados_cliente.ano})`
+            + ` &nbsp; | &nbsp; Idade: `
+            + `<pop>${calcular_idade(dados_cliente)} anos</pop> `
+            + `em ${data.getFullYear()}`
     console.log(idade)
     $("#idade").html(idade)
 }
