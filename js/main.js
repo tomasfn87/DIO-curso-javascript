@@ -19,12 +19,18 @@ const mostrar_idade = () => {
         mes: document.getElementById("mes").value,
         ano: document.getElementById("ano").value
     }
-    idade = `Nome: <pop>${dados_cliente.nome}</pop> (${dados_cliente.ano})`
-            + ` &nbsp; | &nbsp; Idade: `
-            + `<pop>${calcular_idade(dados_cliente)} anos</pop> `
-            + `em ${data.getFullYear()}`
-    console.log(idade)
-    $("#idade").html(idade)
+    const idade = calcular_idade(dados_cliente)
+
+    console.log(`Nome: ${dados_cliente.nome} (${dados_cliente.ano}) | `
+                + `Idade: ${idade} anos em ${data.getFullYear()}`
+    )
+
+    $("#idade").html(
+        `Nome: <pop>${dados_cliente.nome}</pop> (${dados_cliente.ano})`
+        + ` &nbsp; | &nbsp; Idade: `
+        + `<pop>${calcular_idade(dados_cliente)} anos</pop> `
+        + `em ${data.getFullYear()}`
+    )
 }
 
 const mostrar_proximo = (item, tempo="slow") => {
