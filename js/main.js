@@ -19,7 +19,7 @@ const mostrar_idade = () => {
         ano: document.getElementById("ano").value
     }
     idade = `Nome: <pop>${dados_cliente.nome}</pop> &nbsp; | &nbsp; `
-            + `Idade: <pop>${calcular_idade(dados_cliente)}</pop> anos`
+            + `Idade: <pop>${calcular_idade(dados_cliente)} anos</pop>`
     console.log(idade)
     $("#idade").html(idade)
 }
