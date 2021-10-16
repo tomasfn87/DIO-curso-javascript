@@ -29,7 +29,6 @@ const mostrar_idade = () => {
     $("#idade").html(idade)
 }
 
-// Refatorando 1) definindo função: 8 linhas
 const mostrar_proximo = (item, tempo="slow") => {
     $(`div#item-${item}`).click(function(){
         $(`div#item-${item + 1}`).show(tempo)
@@ -47,38 +46,7 @@ $(function() {
     $("div#item-1").keypress(function(){
         $("#idade").hide("slow")
     })
-
-    // Refatorando 2) chamada da função mostrar_proximo: 1 linha
     for (i = 1; i < 5; i++) { mostrar_proximo(i) }
-
-    // Refatorando 3) código descartado: 24 linhas
-    // Economia de código 24 - (8 + 1) = 15 linhas
-
-    /* $("div#item-1").click(function(){
-        $("div#item-2").show("slow")
-    })
-    $("div#item-1").keypress(function(){
-        $("div#item-2").show("slow")
-    })
-    $("div#item-2").click(function(){
-        $("div#item-3").show("slow")
-    })
-    $("div#item-2").keypress(function(){
-        $("div#item-3").show("slow")
-    })
-    $("div#item-3").click(function(){
-        $("div#item-4").show("slow")
-    })
-    $("div#item-3").keypress(function(){
-        $("div#item-4").show("slow")
-    })
-    $("div#item-4").click(function(){
-        $("div#item-5").show("slow")
-    })
-    $("div#item-4").keypress(function(){
-        $("div#item-5").show("slow")
-    }) */
-
     $("div#item-5").click(function(){
         $("div.proximo").hide("slow")
         $("#idade").show("slow")
