@@ -1,15 +1,11 @@
 const calcular_idade = (dados_cliente) => {
     const data = new Date
-    const data_ano = data.getFullYear()
-    const data_mes = data.getMonth()
-    const data_dia = data.getDate()
-
-    const idade = data_ano - dados_cliente.ano_nascimento
-    if (data_mes > dados_cliente.mes_nascimento) {
+    const idade = data.getFullYear() - dados_cliente.ano_nascimento
+    if (data.getMonth() > dados_cliente.mes_nascimento) {
         return idade
     }
-    else if (data_mes == dados_cliente.mes_nascimento) {
-        if (data_dia >= dados_cliente.dia_nascimento) {
+    else if (data.getMonth() == dados_cliente.mes_nascimento) {
+        if (data.getDate() >= dados_cliente.dia_nascimento) {
             return idade
         }
     } return idade - 1
