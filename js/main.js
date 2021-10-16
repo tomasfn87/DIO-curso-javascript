@@ -20,7 +20,6 @@ const mostrar_idade = () => {
     }
     idade = `Nome: ${dados_cliente.nome} &nbsp; | &nbsp; `
             + `Idade: ${calcular_idade(dados_cliente)} anos`
-    
     console.log(idade)
     $("#idade").html(idade)
 }
