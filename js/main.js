@@ -1,11 +1,11 @@
 const calcular_idade = (dados_cliente) => {
     const data = new Date
-    const idade = data.getFullYear() - dados_cliente.ano_nascimento
-    if (data.getMonth() > dados_cliente.mes_nascimento) {
+    const idade = data.getFullYear() - dados_cliente.ano
+    if (data.getMonth() > dados_cliente.mes) {
         return idade
     }
-    else if (data.getMonth() == dados_cliente.mes_nascimento) {
-        if (data.getDate() >= dados_cliente.dia_nascimento) {
+    else if (data.getMonth() == dados_cliente.mes) {
+        if (data.getDate() >= dados_cliente.dia) {
             return idade
         }
     } return idade - 1
@@ -14,35 +14,35 @@ const calcular_idade = (dados_cliente) => {
 const mostrar_idade = () => {
     const dados_cliente = {
         nome: document.getElementById("nome").value,
-        dia_nascimento: document.getElementById("dia").value,
-        mes_nascimento: document.getElementById("mes").value,
-        ano_nascimento: document.getElementById("ano").value
+        dia: document.getElementById("dia").value,
+        mes: document.getElementById("mes").value,
+        ano: document.getElementById("ano").value
     }
-    idade = `Nome: ${dados_cliente.nome} &nbsp; | &nbsp; `
-            + `Idade: ${calcular_idade(dados_cliente)} anos`
+    idade = `Nome: <pop>${dados_cliente.nome}</pop> &nbsp; | &nbsp; `
+            + `Idade: <pop>${calcular_idade(dados_cliente)}</pop> anos`
     console.log(idade)
     $("#idade").html(idade)
 }
 
 const mostrar_proximo = (item, tempo="slow") => {
-    $(`div#item-${item}`).click(function(){
+    $(`div#item-${item}`).click(() => {
         $(`div#item-${item + 1}`).show(tempo)
     })
-    $(`div#item-${item}`).keypress(function(){
+    $(`div#item-${item}`).keypress(() => {
         $(`div#item-${item + 1}`).show(tempo)
     })
 }
 
-$(function() {
+$(() => {
     $("div.proximo").hide() 
-    $("div#item-1").click(function(){
+    $("div#item-1").click(() => {
         $("#idade").hide("slow")
     })
-    $("div#item-1").keypress(function(){
+    $("div#item-1").keypress(() => {
         $("#idade").hide("slow")
     })
-    for (i = 1; i < 5; i++) { mostrar_proximo(i) }
-    $("div#item-5").click(function(){
+    for ( i = 1; i < 5; i++ ) { mostrar_proximo(i) }
+    $("div#item-5").click(() => {
         $("div.proximo").hide("slow")
         $("#idade").show("slow")
         $(":input").val("");
