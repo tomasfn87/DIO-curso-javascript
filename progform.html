@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Prog Form (Progressive Form - Formulário Progressivo)
+  </title>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <style>
+    pop { color: #fff; font-size: 1.15em; }
+  </style>
+</head>
+
+<body id="progform">
+  <br>
+  <div class="container-fluid bg-dark">
+    <h4 class="text-white-50" style="padding: .5em 0;">
+      Vamos calcular a idade
+    </h4>
+    <div class="mb-3" id="item-1">
+      <input id="nome" placeholder="Nome" style="width: 15em;"
+      class="form-control bg-dark text-white" autocomplete="off">
+      <div class="form-text">
+        Digite o nome completo ou apenas o primeiro nome
+      </div>
+    </div>
+    <div class="mb-3 proximo" id="item-2">
+      <input id="dia" placeholder="Dia" style="width: 6em;"
+      class="form-control bg-dark text-white" autocomplete="off">
+      <div class="form-text">Digite o dia de nascimento</div>
+    </div>
+    <div class="mb-3 proximo" id="item-3">
+      <input id="mes" placeholder="Mês" style="width: 6em;"
+      class="form-control bg-dark text-white" autocomplete="off">
+      <div class="form-text">Digite o mês de nascimento</div>
+    </div>
+    <div class="mb-3 proximo" id="item-4">
+      <input id="ano" placeholder="Ano" style="width: 6em;"
+      class="form-control bg-dark text-white" autocomplete="off">
+      <div class="form-text">Digite o ano de nascimento</div>
+    </div>
+    <div class="g-lg-4 proximo" id="item-5">
+      <button type="button" class="btn btn-lg btn-outline-success"
+      onclick="mostrar_idade()">
+        Ver idade
+      </button>
+    </div>
+    <br>
+    <h6 id="idade" class="text-white-50"></h6>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/progform.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
